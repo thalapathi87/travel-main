@@ -1,0 +1,196 @@
+:root {
+    --primary: #FF6B35;
+    --secondary: #2B3D4F;
+    --accent: #00A8E8;
+    --bg-light: #F7F9FB;
+    --text-dark: #1A1A1A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Film Grain Effect */
+.grain-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F2F1 100%);
+    overflow: hidden;
+}
+
+.main-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 8rem;
+    letter-spacing: 10px;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.title-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s forwards var(--delay);
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Plane Animation */
+.plane-container {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    animation: planeFly 15s linear infinite;
+}
+
+.plane {
+    width: 60px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50% 50% 20% 20%;
+    position: relative;
+}
+
+@keyframes planeFly {
+    from { transform: translateX(-10%); }
+    to { transform: translateX(110%); }
+}
+
+/* World Map SVG */
+.world-map-section {
+    padding: 100px 5%;
+    background: var(--secondary);
+    text-align: center;
+}
+
+.continent {
+    fill: #3e566d;
+    stroke: #526d85;
+    stroke-width: 1;
+    transition: 0.3s;
+}
+
+.continent:hover {
+    fill: var(--primary);
+}
+
+.travel-route {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawRoute 4s ease-in-out forwards 1s;
+}
+
+@keyframes drawRoute {
+    to { stroke-dashoffset: 0; }
+}
+
+/* Destination Cards */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 80px 10%;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.destination-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+}
+
+.paris { background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500'); }
+.tokyo { background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=500'); }
+.bali { background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500'); }
+.newyork { background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=500'); }
+
+.card-content { padding: 20px; }
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    background: var(--primary);
+    color: white;
+}
+
+.stat-item { text-align: center; }
+.stat-number { font-size: 3rem; font-weight: bold; }
+
+/* Booking Form */
+.booking-section {
+    padding: 100px 10%;
+    background: #f0f4f8;
+}
+
+.booking-card {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.cta-button {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.button-shine {
+    position: absolute;
+    top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.5s;
+}
+
+.cta-button:hover .button-shine { left: 100%; }

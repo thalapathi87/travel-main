@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey - Travel Animation Experience</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url(./Travel\ 3d\ text\ vector\ design_\ Travel\ the\ world\ in\ famous\ landmarks\ and\ famous\ destinations\ with\ 3d\ text\ in\ blue\ background\ for\ adventure\ vacation\ \(1\).\ Vector\ illustration) ;">
+    <div class="grain-overlay"  ></div>
+    
+    <div class="hero-section" style="color: black;">
+        <div class="sky-gradient"></div>
+        <div class="clouds-container">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
+            <div class="cloud cloud-5"></div>
+        </div>
+        
+        <div class="plane-container">
+            <div class="plane">
+                <div class="plane-body"></div>
+                <div class="plane-wing"></div>
+                <div class="plane-tail"></div>
+                <div class="plane-window"></div>
+                <div class="contrail"></div>
+            </div>
+        </div>
+        
+        <div class="title-container" >
+            <h1 class="main-title">
+                <span class="title-word" style="--delay: 0s">EXPLORE</span>
+                <span class="title-word" style="--delay: 0.1s">THE</span>
+                <span class="title-word" style="--delay: 0.2s">WORLD</span>
+            </h1>
+            <p class="subtitle">Embark on extraordinary journeys</p>
+        </div>
+    </div>
+
+    <div class="world-map-section">
+        <svg class="world-map" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Simplified world continents -->
+            <g class="continents">
+                <!-- North America -->
+                <path class="continent" d="M150,150 Q200,120 250,140 L280,180 Q290,220 270,260 L240,290 Q200,280 180,250 L150,220 Z" style="--anim-delay: 0s"/>
+                
+                <!-- South America -->
+                <path class="continent" d="M250,320 L280,350 Q290,400 280,450 L260,480 Q240,490 220,470 L210,420 Q215,380 230,340 Z" style="--anim-delay: 0.2s"/>
+                
+                <!-- Europe -->
+                <path class="continent" d="M480,140 L520,130 Q550,135 560,160 L555,190 Q540,200 520,195 L490,185 Z" style="--anim-delay: 0.4s"/>
+                
+                <!-- Africa -->
+                <path class="continent" d="M520,220 Q560,230 580,270 L590,340 Q580,400 560,440 L530,460 Q500,450 490,410 L485,350 Q490,290 510,250 Z" style="--anim-delay: 0.6s"/>
+                
+                <!-- Asia -->
+                <path class="continent" d="M650,120 L750,110 Q850,125 920,150 L950,190 Q940,240 900,270 L820,280 Q750,270 700,250 L670,220 Q660,180 665,150 Z" style="--anim-delay: 0.8s"/>
+                
+                <!-- Australia -->
+                <path class="continent" d="M850,380 Q900,375 930,395 L940,425 Q930,450 900,455 L860,450 Q840,430 845,405 Z" style="--anim-delay: 1s"/>
+            </g>
+            
+            <!-- Travel route line -->
+            <path class="travel-route" d="M200,200 Q400,250 600,180 T900,250" 
+                  stroke-dasharray="1000" stroke-dashoffset="1000"/>
+            
+            <!-- Destination markers -->
+            <g class="destinations">
+                <circle class="destination" cx="200" cy="200" r="8" style="--marker-delay: 1.5s"/>
+                <circle class="destination" cx="520" cy="170" r="8" style="--marker-delay: 1.8s"/>
+                <circle class="destination" cx="700" cy="200" r="8" style="--marker-delay: 2.1s"/>
+                <circle class="destination" cx="900" cy="250" r="8" style="--marker-delay: 2.4s"/>
+                
+                <!-- Pulsing rings around destinations -->
+                <circle class="pulse-ring" cx="200" cy="200" r="8" style="--marker-delay: 1.5s"/>
+                <circle class="pulse-ring" cx="520" cy="170" r="8" style="--marker-delay: 1.8s"/>
+                <circle class="pulse-ring" cx="700" cy="200" r="8" style="--marker-delay: 2.1s"/>
+                <circle class="pulse-ring" cx="900" cy="250" r="8" style="--marker-delay: 2.4s"/>
+            </g>
+            
+            <!-- Flying plane on route -->
+            <g class="map-plane" style="--plane-delay: 1.2s">
+                <circle cx="0" cy="0" r="6" fill="#FF6B35"/>
+                <path d="M-8,-2 L8,-2 L6,2 L-6,2 Z" fill="#FF6B35"/>
+            </g>
+        </svg>
+        
+        <div class="map-title">
+            <h2>Journey Across Continents</h2>
+        </div>
+    </div>
+
+    <div class="destinations-grid">
+        <div class="destination-card" style="--card-delay: 0s">
+            <div class="card-image paris"></div>
+            <div class="card-content">
+                <h3>Paris</h3>
+                <p>City of Lights</p>
+                <div class="card-stats">
+                    <span>🌟 4.9</span>
+                    <span>✈️ 2.5k visitors</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="destination-card" style="--card-delay: 0.15s">
+            <div class="card-image tokyo"></div>
+            <div class="card-content">
+                <h3>Tokyo</h3>
+                <p>Future Meets Tradition</p>
+                <div class="card-stats">
+                    <span>🌟 4.8</span>
+                    <span>✈️ 3.2k visitors</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="destination-card" style="--card-delay: 0.3s">
+            <div class="card-image bali"></div>
+            <div class="card-content">
+                <h3>Bali</h3>
+                <p>Island Paradise</p>
+                <div class="card-stats">
+                    <span>🌟 4.9</span>
+                    <span>✈️ 2.8k visitors</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="destination-card" style="--card-delay: 0.45s">
+            <div class="card-image newyork"></div>
+            <div class="card-content">
+                <h3>New York</h3>
+                <p>The Big Apple</p>
+                <div class="card-stats">
+                    <span>🌟 4.7</span>
+                    <span>✈️ 4.1k visitors</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <div class="stat-item" style="--stat-delay: 0s">
+            <div class="stat-number" data-target="150">0</div>
+            <div class="stat-label">Countries</div>
+        </div>
+        <div class="stat-item" style="--stat-delay: 0.2s">
+            <div class="stat-number" data-target="2500">0</div>
+            <div class="stat-label">Destinations</div>
+        </div>
+        <div class="stat-item" style="--stat-delay: 0.4s">
+            <div class="stat-number" data-target="50000">0</div>
+            <div class="stat-label">Happy Travelers</div>
+        </div>
+        <div class="stat-item" style="--stat-delay: 0.6s">
+            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-label">Satisfaction %</div>
+        </div>
+    </div>
+
+    <div class="booking-section">
+        <div class="booking-card">
+            <h2>Start Your Adventure</h2>
+            <form class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Destination</label>
+                        <input type="text" placeholder="Where to?">
+                    </div>
+                    <div class="form-group">
+                        <label>Travel Date</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Travelers</label>
+                        <select>
+                            <option>1 Traveler</option>
+                            <option>2 Travelers</option>
+                            <option>3 Travelers</option>
+                            <option>4+ Travelers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Budget</label>
+                        <select>
+                            <option>Budget Friendly</option>
+                            <option>Mid Range</option>
+                            <option>Luxury</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="cta-button">
+                    <span>Explore Destinations</span>
+                    <div class="button-shine"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Journey. Explore the extraordinary.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
